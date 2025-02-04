@@ -1,3 +1,3 @@
-# Pink_Snake
+# PinkSnake
 
 Pink-themed snake game
