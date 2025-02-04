@@ -52,4 +52,12 @@ class Snake:
           new_turtle.penup()
           self.all_turtles.append(new_turtle)
           new_turtle.goto(self.all_turtles[self.index - 1].pos())
-        
+
+      def reset(self):
+          for turtle in self.all_turtles:
+              turtle.goto(1000, 1000)
+          self.all_turtles.clear()
+          self.index = 2
+          self.create_snake()
+          self.head = self.all_turtles[0]
+            
