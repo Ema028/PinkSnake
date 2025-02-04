@@ -36,13 +36,13 @@ while game is True:
     xcor = snake.head.xcor()
     ycor = snake.head.ycor()
     if xcor < -280 or xcor > 280 or ycor > 280 or ycor < -280:
-        score.game_over()
-        game = False
+        score.reset()
+        snake.reset()
 
     # Colisão com a cauda
     for turtle in snake.all_turtles[1:]:
         if snake.head.distance(turtle) < 10:
-            score.game_over()
-            game = False
+            score.reset()
+            snake.reset()
 
 screen.exitonclick()
